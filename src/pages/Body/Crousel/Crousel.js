@@ -12,7 +12,7 @@ export default function SkillSlider() {
     updateCount: 0,
   });
   var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     // fade: true,
     speed: 500,
@@ -29,19 +29,44 @@ export default function SkillSlider() {
     <div style={{ marginLeft: "40px" }} className=" ">
       <Slider {...settings}>
         <div className="text-center">
-          <img src={Img1} alt="Image 1" className="w-10 h-12" />
+          <img
+            style={{ width: "307px", height: "363px" }}
+            src={Img1}
+            alt="Image 1"
+            className="rounded"
+          />
         </div>
         <div>
-          <img src={Img2} alt="Image 1" className="w-10 h-12" />
+          <img
+            style={{ width: "309px", height: "363px" }}
+            src={Img2}
+            alt="Image 1"
+            className="rounded"
+          />
         </div>
         <div>
-          <img src={Img3} alt="Image 1" className="w-10 h-12" />
+          <img
+            style={{ width: "309px", height: "356px" }}
+            src={Img3}
+            alt="Image 1"
+            className="rounded"
+          />
         </div>
         <div>
-          <img src={Img4} alt="Image 1" className="w-10 h-12" />
+          <img
+            style={{ width: "309px", height: "356px" }}
+            src={Img4}
+            alt="Image 1"
+            className="rounded"
+          />
         </div>
         <div>
-          <img src={Img5} alt="Image 1" className="w-10 h-12" />
+          <img
+            style={{ width: "309px", height: "356px" }}
+            src={Img5}
+            alt="Image 1"
+            className="rounded"
+          />
         </div>
       </Slider>
     </div>

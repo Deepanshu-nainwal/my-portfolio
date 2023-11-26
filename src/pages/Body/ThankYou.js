@@ -4,6 +4,8 @@ import { ToggleRight, ToggleLeft } from "react-feather";
 import thankYou from "../../assets/imgs/thankYou2.jpg";
 import toast from "react-hot-toast";
 import "./thankYou.css";
+import { saveAs } from "file-saver";
+import emailjs from "emailjs-com";
 
 import {
   Badge,
@@ -18,6 +20,11 @@ import {
 } from "reactstrap";
 import { setScrollToThankyou } from "../Header/store/store";
 import { useDispatch } from "react-redux";
+
+const serviceID = "service_x3sivlg";
+const templateID = "template_9lqukrq";
+const userID = "uEsizs471HTMIIxh5";
+
 const defaultValues = {
   name: "",
   email: "",
@@ -49,14 +56,56 @@ export default function ThankYou() {
     });
   };
 
+  function sendEmailToMyself(data) {
+    const templateParams = {
+      to_email: "deepanshunainwal2003@gmail.com",
+      from_name: data?.name,
+      message: data?.msg,
+    };
+
+    emailjs
+      .send(serviceID, templateID, templateParams, userID)
+      .then((response) => {
+        console.log("Email sent successfully:", response);
+      })
+      .catch((error) => {
+        console.error("Email could not be sent:", error);
+      });
+  }
+  function sendEmailToVisiter(data) {
+    console.log(data?.email);
+    const templateParams = {
+      to_email: data?.email,
+      from_name: "Deepanshu Nainwal",
+      message:
+        "Thank you for visiting my portfolio! I'd love to connect and hear your thoughts or ideas. Feel free to drop me a message—I'm just an email away. Let's chat and explore possibilities together!",
+    };
+
+    emailjs
+      .send(serviceID, templateID, templateParams, userID)
+      .then((response) => {
+        console.log("Email sent successfully:", response);
+      })
+      .catch((error) => {
+        console.error("Email could not be sent:", error);
+      });
+  }
+  console.log("touchData", touchData);
   const onSubmit = (data) => {
     const myObj = { name: data.name, email: data.email, msg: data.msg };
     if (data.name === "" || data.email === "" || data.msg === "") {
       toast.error("Please Fill Details");
     } else {
+      setTouchData([...touchData, myObj]);
       localStorage.setItem("Data", JSON.stringify([...touchData, myObj]));
       reset(defaultValues);
+      sendEmailToVisiter(data);
+      sendEmailToMyself(data);
+      toast.success("Thank you for visiting..😁");
     }
+    // const blob = new Blob([data], { type: "text/csv" });
+    // // Use file-saver to save the Blob as a CSV file
+    // saveAs(blob, "form_data.csv");
   };
 
   const infoData = JSON.parse(localStorage.getItem("Data"));
@@ -98,15 +147,23 @@ export default function ThankYou() {
   }, []);
 
   return (
-    <div ref={scrollTargetRef} style={{ marginTop: "200px" }}>
+    <div
+      id="thankYou_section"
+      ref={scrollTargetRef}
+      style={{ marginTop: "100px" }}
+    >
       <div className="text-center mb-7 ">
-        <h1 className=" text-6xl text-primaryColor font-bold ">
+        <h1 className=" text-5xl text-primaryColor font-bold ">
           Get In Touch.
         </h1>
       </div>
       <div className="bg-primaryColor_3 px-7 py-8 ">
-        <Row className="default_Row  ">
-          <Col md="4" className="px-7 d-flex flex-column align-items-center  ">
+        <Row className="default_Row ">
+          <Col
+            id="tank_you_animation"
+            md="4"
+            className="px-7 d-flex flex-column align-items-center  "
+          >
             <div className="base ms-5 rounded-full bg-primaryColor_2">
               <div className="holder"></div>
               <div className="thread">
@@ -120,7 +177,7 @@ export default function ThankYou() {
           </Col>
           <Col
             md="4"
-            className="px-7 d-flex flex-column align-items-center  ms-10"
+            className="contact_form px-7 d-flex flex-column align-items-center  ms-10"
           >
             {!showInfoData ? (
               <Card style={{ borderRadius: "20px" }}>
@@ -147,7 +204,12 @@ export default function ThankYou() {
                         id="name"
                         control={control}
                         render={({ field }) => (
-                          <Input {...field} type="text" placeholder="Name..." />
+                          <Input
+                            {...field}
+                            type="text"
+                            placeholder="Name..."
+                            name="from_name"
+                          />
                         )}
                       />
                     </Col>
@@ -158,7 +220,12 @@ export default function ThankYou() {
                         id="email"
                         control={control}
                         render={({ field }) => (
-                          <Input {...field} type="text" placeholder="Email" />
+                          <Input
+                            {...field}
+                            type="text"
+                            placeholder="Email"
+                            name="form_email"
+                          />
                         )}
                       />
                     </Col>
@@ -173,6 +240,7 @@ export default function ThankYou() {
                             {...field}
                             className="h-9 "
                             type="textarea"
+                            name="message"
                             placeholder="Hey There....!"
                           />
                         )}

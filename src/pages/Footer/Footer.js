@@ -25,6 +25,7 @@ export default function Footer() {
   }, []);
   return (
     <div
+      id="footer"
       ref={scrollTargetRef}
       className=" App bg-gray-light  d-flex flex-column align-items-center justify-content-center"
       style={{ height: "200px", marginTop: "150px" }}

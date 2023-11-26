@@ -20,9 +20,9 @@ export default function Company() {
     dispatch(setScrollToCompany(scrollToTarget));
   }, []);
   return (
-    <div ref={scrollTargetRef} style={{ marginTop: "200px" }}>
+    <div ref={scrollTargetRef} id="company_section">
       <div className="text-center mb-7 ">
-        <h1 className=" text-6xl text-primaryColor font-bold ">
+        <h1 className=" text-5xl text-primaryColor font-bold ">
           Working Journey.
         </h1>
       </div>

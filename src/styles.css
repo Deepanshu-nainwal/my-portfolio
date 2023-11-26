@@ -46,3 +46,105 @@
   background-color: #fff;
   border-radius: 5px;
 }
+.icon-hover:hover {
+  color: #35b8be;
+  /* fill: #35b8be; */
+  cursor: pointer;
+}
+/* ----------------------------------------------------------------------------------------------------------------- */
+@media only screen and (max-width: 600px) {
+  /* Styles for screens smaller than 600px */
+  /* // FOR INTRO PAGE------------------------------- */
+  /* // FOR INTRO PAGE------------------------------- */
+
+  #intro_section {
+    margin: auto;
+    width: 197%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .intro_section_text {
+  }
+  .intro_outer_box {
+    padding: 0;
+    margin: 0;
+    /* width: 50%; */
+  }
+  /* // FOR SKILL PAGE------------------------------- */
+  #skill_section {
+    min-width: 197%;
+  }
+  /* // FOR company PAGE------------------------------- */
+  #company_section {
+    min-width: 197%;
+  }
+  /* // FOR thankYou_section PAGE------------------------------- */
+  #thankYou_section {
+    min-width: 197%;
+    text-align: center;
+  }
+
+  #tank_you_animation {
+    width: 100%;
+    margin: 30px 90px;
+    overflow: hidden;
+    display: none;
+  }
+  .contact_form {
+    margin: 40px 0;
+  }
+  /* // FOR footer PAGE------------------------------- */
+  #footer {
+    min-width: 197%;
+    text-align: center;
+  }
+}
+/*----------------------------------------------------------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------- */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Styles for screens between 601px and 1024px */
+  #intro_section {
+    box-sizing: border-box; /* Add this line */
+    margin: auto;
+    width: 192%;
+  }
+  .intro_section_text {
+  }
+  .intro_outer_box {
+    padding: 0;
+    margin: 0;
+    /* width: 50%; */
+  }
+  /* // FOR SKILL PAGE------------------------------- */
+  #skill_section {
+    min-width: 192%;
+  }
+  /* // FOR company PAGE------------------------------- */
+  #company_section {
+    min-width: 192%;
+  }
+  /* // FOR thankYou_section PAGE------------------------------- */
+  #thankYou_section {
+    min-width: 192%;
+    text-align: center;
+  }
+
+  /* // FOR footer PAGE------------------------------- */
+  #footer {
+    min-width: 192%;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #tank_you_animation {
+    width: 70%;
+    margin: 30px -90px;
+    overflow: hidden;
+    display: none;
+  }
+  .contact_form {
+    margin: 40px 0;
+    min-width: 0%;
+  }
+}
