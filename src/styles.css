@@ -22,7 +22,15 @@
     opacity: 1;
   }
 }
-
+.custom_link {
+  &:hover {
+    padding: 2px 0;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #000;
+    font-weight: bolder;
+  }
+}
 /* custom Scroll Bar */
 .custom-scrollbar {
   width: 100%;
@@ -51,7 +59,61 @@
   /* fill: #35b8be; */
   cursor: pointer;
 }
+/* project_section---------------------------------------------- */
+.project_section {
+  margin: 80px 0 !important;
+}
+.project_box {
+  background-color: #35b8be12;
+  border: 1px solid #35b8be;
+  border-radius: 24px;
+  padding: 20px 5px;
+  width: 20%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.project_outer_box {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  /* flex-wrap: wrap;/ */
+}
+
+.project_img {
+  vertical-align: middle;
+  width: 86%;
+  height: 71%;
+  margin: auto;
+  border-radius: 20px;
+}
+.project_btn {
+  color: #35b8be !important;
+  font-weight: bolder !important;
+  border: 2px solid #35b8be !important;
+  margin: 10px 10px !important;
+  border-radius: 20px !important;
+  padding: 8px 28px !important;
+  &:hover {
+    color: #fff !important;
+    background-color: #35b8be !important;
+  }
+}
 /* ----------------------------------------------------------------------------------------------------------------- */
+@media only screen and (max-width: 400px) {
+  .project_section {
+    min-width: 197%;
+  }
+  .project_outer_box {
+    width: 190%;
+    margin-left: 230px;
+    display: inline-block;
+  }
+  .project_box {
+    margin-bottom: 50px;
+  }
+}
 @media only screen and (max-width: 600px) {
   /* Styles for screens smaller than 600px */
   /* // FOR INTRO PAGE------------------------------- */
@@ -73,6 +135,10 @@
   }
   /* // FOR SKILL PAGE------------------------------- */
   #skill_section {
+    min-width: 197%;
+  }
+  /* // FOR Project PAGE------------------------------- */
+  .project_section {
     min-width: 197%;
   }
   /* // FOR company PAGE------------------------------- */
@@ -123,10 +189,28 @@
   #company_section {
     min-width: 192%;
   }
+  /* // FOR company PAGE------------------------------- */
+  .project_section {
+    min-width: 192%;
+  }
+  /* .project_outer_box {
+    width: 190%;
+  } */
+  /* .project_box {
+    margin-bottom: 50px;
+  } */
   /* // FOR thankYou_section PAGE------------------------------- */
   #thankYou_section {
     min-width: 192%;
     text-align: center;
+    overflow: hidden;
+  }
+  .contact_form {
+    margin-left: 0 !important;
+    margin-top: 30px !important;
+  }
+  #tank_you_animation {
+    margin: 0 200px;
   }
 
   /* // FOR footer PAGE------------------------------- */

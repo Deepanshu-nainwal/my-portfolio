@@ -28,7 +28,15 @@ export default function Company() {
       </div>
       <div className="">
         <Row className="default_Row">
-          <Col md="4" className="px-7 d-flex flex-column align-items-center  ">
+          <Col
+            onClick={() => {
+              window.open(
+                "https://www.linkedin.com/company/legistify-legaltech/mycompany/"
+              );
+            }}
+            md="4"
+            className="px-7 d-flex flex-column align-items-center cursor-pointer  "
+          >
             <div
               style={{ width: "300px", height: "300px " }}
               className=" level Box_shadow  bg-primaryColor rounded-full   d-flex flex-column justify-content-center"
@@ -37,7 +45,16 @@ export default function Company() {
             </div>
             <h3 className="font-bold w-10 mt-4 ">
               Software Developer At{" "}
-              <span className="text-primaryColor">Legistify</span>
+              <span
+                onClick={() => {
+                  window.open(
+                    "https://www.linkedin.com/company/legistify-legaltech/mycompany/"
+                  );
+                }}
+                className="text-primaryColor cursor-pointer"
+              >
+                Legistify
+              </span>
             </h3>
           </Col>
           <Col md="4" className="px-7 d-flex flex-column align-items-center  ">

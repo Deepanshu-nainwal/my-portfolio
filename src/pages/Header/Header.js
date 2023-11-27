@@ -43,7 +43,12 @@ export default function Header() {
           className="bg-primaryColor text-white text-0xl text-center h-7 py-3 "
         >
           We&#x27;re open and available for takeaway &amp; delivery.
-          <span className="font-bold">Connect Now</span>
+          <span
+            onClick={() => scrollToThankYou()}
+            className="custom_link font-bold  "
+          >
+            Connect Now
+          </span>
         </Col>
         <Col
           md="12"

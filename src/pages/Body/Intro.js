@@ -19,7 +19,7 @@ export default function Intro() {
   };
 
   const redirectToPortfolio = () => {
-    window.open("https://github.com/Deepanshu-nainwal");
+    window.open("https://github.com/Deepanshu-nainwal/my-portfolio");
   };
   return (
     <div
