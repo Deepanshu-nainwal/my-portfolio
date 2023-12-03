@@ -11,6 +11,7 @@ export default function Skills() {
       className=" px-5 py-4 my-5 "
     >
       <Col
+        id="skill_scroll"
         style={{ maxWidth: "480px", margin: "auto" }}
         md="6"
         className=" h-12  "

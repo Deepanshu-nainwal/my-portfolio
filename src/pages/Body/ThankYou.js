@@ -157,7 +157,7 @@ export default function ThankYou() {
           Get In Touch.
         </h1>
       </div>
-      <div className="bg-primaryColor_3 px-7 py-8 ">
+      <div id="form_outer_box" className="bg-primaryColor_3 px-7 py-8 ">
         <Row className="default_Row ">
           <Col
             id="tank_you_animation"
@@ -181,11 +181,14 @@ export default function ThankYou() {
           >
             {!showInfoData ? (
               <Card style={{ borderRadius: "20px" }}>
-                <CardBody className="w-14">
+                <CardBody id="form_card_body" className="w-14">
                   <Row className="px-4">
                     <Col md="12">
                       {infoData?.length > 0 && (
-                        <div className="d-flex justify-content-end cursor-pointer">
+                        <div
+                          id="toggle_btn"
+                          className="d-flex justify-content-end cursor-pointer"
+                        >
                           <Button
                             onClick={() => setShowInfoData(true)}
                             size="sm"

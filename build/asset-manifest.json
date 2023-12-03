@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.db43e90c.css",
-    "main.js": "/static/js/main.6dd9cade.js",
+    "main.css": "/static/css/main.6db9afc0.css",
+    "main.js": "/static/js/main.d9caa053.js",
     "static/js/787.3ec24a8f.chunk.js": "/static/js/787.3ec24a8f.chunk.js",
     "static/media/img_1.jpg": "/static/media/img_1.f3b7907c8820b60cdb73.jpg",
+    "static/media/Deepanshu_Nainwal_Resume.pdf": "/static/media/Deepanshu_Nainwal_Resume.70313d9887525fdc9a31.pdf",
     "static/media/img_3.jpg": "/static/media/img_3.3e68e88603a14f038fb3.jpg",
     "static/media/CSS.jpg": "/static/media/CSS.41f6b30166b3b68053da.jpg",
     "static/media/HTML.jpg": "/static/media/HTML.6ded5f95ef91e123dfd9.jpg",
@@ -11,6 +12,7 @@
     "static/media/REACT.jpg": "/static/media/REACT.f2fe88a2bc0bac2571d1.jpg",
     "static/media/thankYou2.jpg": "/static/media/thankYou2.26ea0db50b1a877e19ed.jpg",
     "static/media/JS.jpg": "/static/media/JS.1f06079036e6e2cf5960.jpg",
+    "static/media/women-logo.png": "/static/media/women-logo.2faabb4f5ef9ec2b292c.png",
     "static/media/Logo.jpg": "/static/media/Logo.257c8ae47487ed6fb58e.jpg",
     "static/media/logo.svg": "/static/media/logo.608fc0ad2aa2426089e07a01b24cb873.svg",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -18,12 +20,12 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.db43e90c.css.map": "/static/css/main.db43e90c.css.map",
-    "main.6dd9cade.js.map": "/static/js/main.6dd9cade.js.map",
+    "main.6db9afc0.css.map": "/static/css/main.6db9afc0.css.map",
+    "main.d9caa053.js.map": "/static/js/main.d9caa053.js.map",
     "787.3ec24a8f.chunk.js.map": "/static/js/787.3ec24a8f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.db43e90c.css",
-    "static/js/main.6dd9cade.js"
+    "static/css/main.6db9afc0.css",
+    "static/js/main.d9caa053.js"
   ]
 }

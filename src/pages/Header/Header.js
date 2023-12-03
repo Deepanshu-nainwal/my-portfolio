@@ -12,6 +12,9 @@ export default function Header() {
   const scrollToCompany = useSelector(
     (state) => state.scrollReducer.scrollToCompany
   );
+  const scrollToProject = useSelector(
+    (state) => state.scrollReducer.scrollToProject
+  );
   const scrollToFooter = useSelector(
     (state) => state.scrollReducer.scrollToFooter
   );
@@ -34,7 +37,7 @@ export default function Header() {
   return (
     <div
       ref={scrollTargetRef}
-      style={{ width: "100%", top: "0", zIndex: "10" }}
+      style={{ width: "110%", top: "0", zIndex: "10" }}
       className="fixed "
     >
       <Row style={{ maxWidth: "100%" }}>
@@ -51,10 +54,11 @@ export default function Header() {
           </span>
         </Col>
         <Col
+          id="navbar_box"
           md="12"
           className="Box_shadow bg-white mb-3 d-flex justify-content-between px-5 text-0xl text-center h-8 py-3 "
         >
-          <div className="cursor-pointer">
+          <div id="logo" className="cursor-pointer">
             <img
               onClick={() => scrollToHome()}
               className="h-7"
@@ -62,7 +66,10 @@ export default function Header() {
               alt="logo"
             />
           </div>
-          <div className="d-flex gap-4 text-2xl  cursor-pointer  font-bold">
+          <div
+            id="navContent"
+            className="d-flex gap-4 text-2xl  cursor-pointer  font-bold"
+          >
             <p
               onClick={() => {
                 console.log("2");
@@ -72,7 +79,12 @@ export default function Header() {
             >
               Home
             </p>
-            <p className="hover:text-primaryColor">Projects</p>
+            <p
+              className="hover:text-primaryColor"
+              onClick={() => scrollToProject()}
+            >
+              Projects
+            </p>
             <p
               onClick={() => scrollToCompany()}
               className="hover:text-primaryColor"

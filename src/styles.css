@@ -9,6 +9,9 @@
 .default_Row {
   max-width: 100%;
 }
+#navbar_box {
+  width: 92% !important;
+}
 .fade-in {
   opacity: 0;
   animation: fadeIn 1.5s ease-in-out forwards;
@@ -102,16 +105,139 @@
 }
 /* ----------------------------------------------------------------------------------------------------------------- */
 @media only screen and (max-width: 400px) {
+  .App {
+    width: 100%;
+    overflow: hidden;
+  }
+  #navbar_box {
+    /* background-color: rgb(228, 215, 250) !important; */
+    width: 100%;
+    overflow: hidden;
+    padding: 0px 10px !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0px !important;
+  }
+  #logo {
+    display: none !important;
+  }
+  #navContent {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.2rem !important;
+    padding: 0px 10px !important;
+  }
+  #navbar_box p {
+    padding: 0px 1px !important;
+    margin: 0 !important;
+    font-size: 16px !important;
+  }
+  #intro_section {
+    margin: auto;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-left: 10px !important;
+  }
+  #intro_outer_box_id.intro_outer_box {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .intro_section_text p {
+    /* font-size: 34px !important; */
+    width: 100% !important;
+    margin: 15px 0 !important;
+  }
+
+  /* ------------------------------------------- */
+  #skill_section {
+    max-width: 10% !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+
+    .skill_text {
+      overflow: hidden;
+      display: flex !important;
+      align-items: start !important;
+      justify-content: start !important;
+      word-break: break;
+      width: 70%;
+      padding: 0 20px;
+      padding-left: 30px !important;
+      padding-right: 150px !important;
+    }
+  }
+  #skill_scroll {
+    margin: 0 !important;
+  }
   .project_section {
-    min-width: 197%;
+    min-width: 100% !important;
   }
   .project_outer_box {
-    width: 190%;
-    margin-left: 230px;
+    width: 100% !important;
     display: inline-block;
+    .project_box {
+      width: 70% !important;
+      margin: auto;
+      margin-bottom: 20px;
+    }
   }
   .project_box {
     margin-bottom: 50px;
+  }
+
+  #company_section {
+    min-width: 0% !important;
+    padding: 0 10px !important;
+    overflow: hidden !important;
+  }
+  .company_section_heading {
+    width: 100% !important;
+  }
+  #company_text {
+    /* background-color: rgb(255, 127, 127); */
+    /* padding: 0 10px; */
+    text-align: center;
+  }
+
+  #thankYou_section {
+    min-width: 0% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    #tank_you_animation {
+      display: none !important;
+    }
+  }
+  .default_Row {
+    max-width: 100%;
+    /* padding: 0 18px; */
+    padding-left: 6%;
+    /* margin: auto; */
+    text-align: start;
+  }
+  #toggle_btn {
+    display: none !important;
+  }
+  #form_outer_box {
+    padding: 0 !important;
+    margin: 0 0 !important;
+  }
+  #form_card_body {
+    width: 100% !important;
+  }
+  .contact_form {
+    width: 100% !important;
+    padding: 0px 0 !important;
+    padding-top: 30px !important;
+    overflow: hidden;
+  }
+  #footer {
+    min-width: 0% !important;
   }
 }
 @media only screen and (max-width: 600px) {

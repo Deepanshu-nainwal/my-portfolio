@@ -21,7 +21,7 @@ export default function Company() {
   }, []);
   return (
     <div ref={scrollTargetRef} id="company_section">
-      <div className="text-center mb-7 ">
+      <div className="company_section_heading text-center mb-7 ">
         <h1 className=" text-5xl text-primaryColor font-bold ">
           Working Journey.
         </h1>
@@ -43,7 +43,7 @@ export default function Company() {
             >
               <img className=" w-10 h-9 rounded-xl  " src={Legistify} alt="" />
             </div>
-            <h3 className="font-bold w-10 mt-4 ">
+            <h3 id="company_text" className="font-bold w-10 mt-4 ">
               Software Developer At{" "}
               <span
                 onClick={() => {
@@ -64,7 +64,9 @@ export default function Company() {
             >
               <Lock color="grey" size={180} />
             </div>
-            <h3 className="font-bold w-10 mt-4 ">Software Developer At ...?</h3>
+            <h3 id="company_text" className="font-bold w-10 mt-4 ">
+              Software Developer At ...?
+            </h3>
           </Col>
           <Col md="4" className="px-7 d-flex flex-column align-items-center  ">
             <div
@@ -73,7 +75,9 @@ export default function Company() {
             >
               <Lock color="grey" size={180} />
             </div>
-            <h3 className="font-bold w-10 mt-4 ">Software Developer At ...?</h3>
+            <h3 id="company_text" className="font-bold w-10 mt-4 ">
+              Software Developer At ...?
+            </h3>
           </Col>
         </Row>
       </div>

@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Img3 from "../../assets/imgs/img_3.jpg";
 import project1 from "../../assets/Logo/SiyaramLogo.png";
 import project2 from "../../assets/Logo/women-logo.png";
 import { Button } from "reactstrap";
+import { useDispatch } from "react-redux";
+import { setScrollToProject } from "../Header/store/store";
 
 export default function () {
+  const scrollTargetRef = useRef(null);
+  const dispatch = useDispatch();
+
+  const scrollToTarget = () => {
+    // Calculate the Y position of the target element
+    const targetY = scrollTargetRef.current.offsetTop;
+
+    // Scroll to the target element's Y position
+    window.scrollTo({
+      top: targetY,
+      behavior: "smooth", // Use smooth scrolling for a smooth transition
+    });
+  };
+  useEffect(() => {
+    dispatch(setScrollToProject(scrollToTarget));
+  }, []);
   return (
-    <div className="project_section  ">
+    <div className="project_section" ref={scrollTargetRef}>
       <div className="text-center mb-5 ">
         <p className="m-0 py-1 text-small text-gray fw-bolder">
           Browse My Recent{" "}

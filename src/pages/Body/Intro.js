@@ -27,6 +27,7 @@ export default function Intro() {
       style={{ marginBottom: "130px", marginTop: "200px" }}
     >
       <Row
+        id="intro_outer_box_id"
         style={{ maxWidth: "100%" }}
         className=" intro_outer_box px-9 mx-5 py-4 my-5"
       >
